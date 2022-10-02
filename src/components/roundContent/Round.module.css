@@ -1,0 +1,34 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+
+    border-radius: 50%;
+
+    background: var(--second-color);
+
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.body img {
+    width: 120%;
+    height: 120%;
+}
+
+.active {
+    border-radius: 30% !important;
+    transition: all 0.3s ease 0s;
+}
+
+.logo {
+    width: 70% !important;
+    height: 70% !important;
+}

@@ -1,0 +1,11 @@
+.mainPage {
+    position: absolute;
+
+    width: calc(100% - 80px);
+    left: 80px;
+    height: calc(100% - 35px);
+    top: 35px;
+
+    background: var(--sidebar-color);
+    border-radius: 15px 0 0 0;
+}
