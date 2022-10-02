@@ -4,7 +4,7 @@ import Icon from "../../Icon/Icon";
 import classes from "classnames";
 import ChatElem from "../../chat/chatElem";
 
-const SidebarMain = ({chats, voices}) => {
+const SidebarMain = ({chats, voices, current, setCurrent}) => {
     const [fullSizeChat, setFullSizeChat] = useState(true)
     const [fullSizeVoice, setFullSizeVoice] = useState(true)
 
@@ -22,7 +22,7 @@ const SidebarMain = ({chats, voices}) => {
                     </div>
                     <div className={fullSizeChat ? cl.chat : classes(cl.chat, cl.invisible)}>
                         {
-                            chats.map((chat) => <ChatElem name={chat.chat} visible={fullSizeChat} type={"chat"}/>)
+                            chats.map((chat) => <ChatElem obj={chat} setCurrent={setCurrent} active={current.chat === chat.chat} name={chat.chat} visible={fullSizeChat} type={"chat"}/>)
                         }
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const SidebarMain = ({chats, voices}) => {
                     </div>
                     <div className={fullSizeVoice ? cl.voiceBlock : classes(cl.voiceBlock, cl.invisible)}>
                         {
-                            voices.map((voice) => <ChatElem name={voice} visible={fullSizeVoice} type={"voice"}/>)
+                            voices.map((voice) => <ChatElem name={voice.voice} visible={fullSizeVoice} type={"voice"}/>)
                         }
                     </div>
                 </div>

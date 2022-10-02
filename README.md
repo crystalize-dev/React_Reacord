@@ -1,4 +1,4 @@
 # Todo:
 - MainPage
 
-Template: https://cdn2.unrealengine.com/discord-2880x1620-8b18742c6a01.jpg
+Template: https://static.billboard.com/files/2020/12/bb19-discord-billboard-1548-1608149327-compressed.jpg

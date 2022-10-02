@@ -16,7 +16,7 @@
     background: var(--fourh-color);
 }
 
-.wrapper:hover p {
+.wrapper:hover p, .active p {
     color: white ;
 }
 
@@ -40,4 +40,8 @@
 
 .invisible {
     height: 0;
+}
+
+.active {
+    background: var(--fourh-color);
 }

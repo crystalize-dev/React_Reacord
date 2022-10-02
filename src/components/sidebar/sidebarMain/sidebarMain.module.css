@@ -75,6 +75,17 @@
     margin-top: 20px;
 }
 
+.voiceBlock {
+    width: 100%;
+    height: fit-content;
+
+    transition: all 0.3s ease 0s;
+}
+
+.voiceBlock > *:not(:first-child), .chat > *:not(:first-child) {
+    margin-top: 5px;
+}
+
 .invisible {
     height: 0;
 }
