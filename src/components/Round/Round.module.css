@@ -21,6 +21,8 @@
 .body img {
     width: 120%;
     height: 120%;
+
+    user-select: none;
 }
 
 .active {
@@ -31,4 +33,10 @@
 .logo {
     width: 70% !important;
     height: 70% !important;
+
+    transition: all 0.3s ease 0s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }

@@ -11,8 +11,8 @@ const Round = ({id, img, className, active, isLogo=false, onClick}) => {
     }
 
     return (
-        <div onClick={(e) => changeActive(e)} className={active === id ? classes(cl.body, cl.active, className) : classes(cl.body, className)}>
-            <img id={id} className={isLogo ? cl.logo : ""} src={img} alt=""/>
+        <div draggable={false} onClick={(e) => changeActive(e)} className={active === id ? classes(cl.body, cl.active, className) : classes(cl.body, className)}>
+            <img draggable={false} id={id} className={isLogo ? cl.logo : ""} src={img} alt=""/>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 
 * {
@@ -9,8 +10,14 @@
 
 :root {
     --main-color: #212226;
-    --second-color: #303136;
-    --sidebar-color: #303136;
+    --second-color: #303136ff;
+    --third-color: #393943;
+    --fourh-color: #40444d;
+    --inactive-color: #84858a;
+
+
+    --header-shadow: -4px 0 5px 2px rgba(0, 0, 0, 0.3);
+    --header-height: 10%;
 }
 
 .wrapper {
@@ -18,4 +25,12 @@
     height: 100vh;
 
     background: var(--main-color);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 1,
+            'wght' 700,
+            'GRAD' 200,
+            'opsz' 48
 }
