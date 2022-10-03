@@ -12,9 +12,74 @@
 }
 
 .mainArea {
-    width: calc(100% - 20%);
+    width: 80%;
     margin-left: 20%;
 
     height: 100%;
 }
 
+.mainChatArea {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.chatArea {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 80%;
+    height: 100%;
+}
+
+.chatArea input {
+    padding: 0 5%;
+
+    width: 95%;
+    height: 45px;
+
+    outline: none;
+    border: none;
+
+    border-radius: 10px;
+    background: var(--input-color);
+
+    margin-top: 20px;
+    color: var(--icons-color);
+}
+
+.chatArea input::-webkit-input-placeholder {
+    font-family: 'Nunito', sans-serif;
+    color: var(--icons-color);
+}
+
+.chatArea> *:nth-child(2) {
+    position: absolute;
+    left: 3.5%;
+    bottom: 92px;
+
+    color: var(--icons-color);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.chatArea> *:nth-child(2):hover {
+    color: white;
+}
+
+.messageArea {
+    display: flex;
+    flex-direction: column-reverse;
+
+    width: 95%;
+    height: 75%;
+
+    overflow: scroll;
+}
+
+.messageArea > *:not(:first-child) {
+    margin-bottom: 10px;
+}

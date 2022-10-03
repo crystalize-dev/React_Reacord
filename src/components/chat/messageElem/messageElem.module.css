@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.textArea {
+    color: var(--icons-color);
+    font-family: 'Nunito', sans-serif;
+
+    margin-left: 20px;
+}
+
+.textArea h1 {
+    font-size: 16px;
+    color: blueviolet;
+}
+
+.textArea p {
+    font-size: 14px;
+}
+
+.me {
+    color: orange !important;
+}

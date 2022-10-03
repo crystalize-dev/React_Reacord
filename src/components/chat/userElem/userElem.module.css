@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    margin-left: 10px;
+}
+
+.text h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: var(--icons-color);
+}
+
+.offline {
+    filter: opacity(0.5);
+}
+
+.me {
+    color:orange !important;
+}

@@ -20,6 +20,7 @@ const UpperBar = ({chat}) => {
                 <Icon>download</Icon>
                 <Icon>alternate_email</Icon>
                 <Icon>help</Icon>
+                <div className={cl.overflow}/>
             </div>
         </div>
     );

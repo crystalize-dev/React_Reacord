@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import cl from "./sidebarMain.module.css";
 import Icon from "../../Icon/Icon";
 import classes from "classnames";
-import ChatElem from "../../chat/chatElem";
+import ChatElem from "../../chat/chatElem/chatElem";
 
 const SidebarMain = ({chats, voices, current, setCurrent}) => {
     const [fullSizeChat, setFullSizeChat] = useState(true)
@@ -22,7 +22,7 @@ const SidebarMain = ({chats, voices, current, setCurrent}) => {
                     </div>
                     <div className={fullSizeChat ? cl.chat : classes(cl.chat, cl.invisible)}>
                         {
-                            chats.map((chat) => <ChatElem obj={chat} setCurrent={setCurrent} active={current.chat === chat.chat} name={chat.chat} visible={fullSizeChat} type={"chat"}/>)
+                            chats.map((chat, index) => <ChatElem key={index} obj={chat} setCurrent={setCurrent} active={current.chat === chat.chat} name={chat.chat} visible={fullSizeChat} type={"chat"}/>)
                         }
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const SidebarMain = ({chats, voices, current, setCurrent}) => {
                     </div>
                     <div className={fullSizeVoice ? cl.voiceBlock : classes(cl.voiceBlock, cl.invisible)}>
                         {
-                            voices.map((voice) => <ChatElem name={voice.voice} visible={fullSizeVoice} type={"voice"}/>)
+                            voices.map((voice, index) => <ChatElem key={index} name={voice.voice} visible={fullSizeVoice} type={"voice"}/>)
                         }
                     </div>
                 </div>

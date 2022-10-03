@@ -1,6 +1,6 @@
 import React from 'react';
 import cl from "./chatElem.module.css";
-import Icon from "../Icon/Icon";
+import Icon from "../../Icon/Icon";
 import classes from "classnames";
 
 const ChatElem = ({name, visible, type, active, setCurrent, obj}) => {

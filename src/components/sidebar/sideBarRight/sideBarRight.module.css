@@ -1,0 +1,21 @@
+.onlineArea {
+    padding: 20px;
+
+    width: 20%;
+    height: 100%;
+
+    background: var(--second-color);
+}
+
+.onlineArea > h1 {
+    color: var(--icons-color);
+
+    font-family: 'Nunito', sans-serif;
+    font-variant: small-caps;
+    font-size: 12px;
+}
+
+.onlineArea > *:nth-child(2n) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

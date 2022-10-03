@@ -3,7 +3,43 @@ import logo2 from "../img/icon2.png"
 import logo3 from "../img/icon3.png"
 import logo4 from "../img/icon4.png"
 
-const messages = ["Hello", "How are you doing?", 'im fine, ty']
+
+
+const user1 = {
+    name: "Carl",
+    role: "admin",
+    status: "online"
+}
+const user2 = {
+    name: "Charlie",
+    role: "user",
+    status: "offline"
+}
+const user3 = {
+    name: "Mark",
+    role: "user",
+    status: "online"
+}
+const user4 = {
+    name: "Timur",
+    role: "user",
+    status: "online"
+}
+const user5 = {
+    name: "Kate",
+    role: "user",
+    status: "online"
+}
+const me = {
+    name: "Me",
+    role: "user",
+    status: "online"
+}
+
+export const users =[user1, user2, user3, user4, user5, me]
+
+
+const messages = [{message: "Hello", sender: user1.name}, {message: "How are you doing?", sender: user2.name}, {message: 'im fine, ty', sender: user3.name}]
 
 const group1 = {
     logo: logo1,

@@ -47,6 +47,8 @@
 }
 
 .iconsArea {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +81,8 @@
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
     color: var(--inactive-color);
+
+    z-index: 10;
 }
 
 .iconsArea span {
@@ -106,4 +110,19 @@
 
     cursor: default;
     color: var(--inactive-color) !important;
+    z-index: 12;
 }
+
+.overflow {
+    position: absolute;
+    right: calc(40px + 22px*3);
+
+    width: 30px;
+    height: 50%;
+
+    border-radius: 0 10px 10px 0;
+
+    background: linear-gradient(to left, var(--main-color),var(--main-color), transparent);
+    z-index: 11;
+}
+
