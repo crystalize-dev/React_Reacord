@@ -77,4 +77,4 @@ const group4 = {
     voiceChat: [{voice: "general"}, {voice: "films"}]
 }
 
-export const groups = [group1, group2, group3, group4]
+export const groups1 = [group1, group2, group3, group4]

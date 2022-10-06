@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Icon = ({children}) => {
+const Icon = ({children, onClick, style}) => {
     return (
-        <span style={{userSelect: "none"}} className="material-symbols-outlined">{children}</span>
+        <span style={style} onClick={onClick} className="material-symbols-outlined">{children}</span>
     );
 };
 

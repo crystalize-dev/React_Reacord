@@ -11,11 +11,12 @@
     border-radius: 50%;
 
     background: var(--second-color);
+    background-size: cover;
 
-    overflow: hidden;
 
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    overflow: hidden;
 }
 
 .body img {

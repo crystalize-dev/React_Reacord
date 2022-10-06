@@ -1,4 +1,5 @@
 # Todo:
-- Я В ЖОПЕ БЛЯТЬ
-- Send message
-- Add group
+- Add chats
+- Search
+- Redux
+- Other functionality

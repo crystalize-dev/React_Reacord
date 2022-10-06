@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 import cl from "./SideBar.module.css";
 import Round from "../../Round/Round";
 import logo from "../../../img/logo.png";
+import add from "../../../img/add.png"
 
-const SideBar = ({active, setActive, groups}) => {
+const SideBar = ({active, setActive, groups, setModal, color}) => {
     const [offset, setOffset] = useState(10)
 
     useEffect(() => {
@@ -31,11 +32,10 @@ const SideBar = ({active, setActive, groups}) => {
             <div className={cl.groupsArea}>
                 <div className={cl.slider} style={{marginTop: offset}}/>
                 {
-                    groups.map((group) => <Round active={active} id={group.name} key={group.name} img={group.logo} onClick={changeActive}/>)
+                    groups.map((group) => <Round color={group.color} active={active} id={group.name} key={group.name} img={group.logo} onClick={changeActive}/>)
                 }
-
-                <div className={cl.overflow}>
-                </div>
+                <Round active={false} img={add} isLogo={true} scale={0.3} onClick={() => setModal(true)}/>
+                <div className={cl.overflow}/>
             </div>
         </div>
     );

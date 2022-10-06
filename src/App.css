@@ -28,6 +28,10 @@
     background: var(--main-color);
 }
 
+span {
+    user-select: none;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
             'FILL' 1,
