@@ -1,6 +1,11 @@
 .wrapper {
     display: flex;
     align-items: center;
+
+    height: fit-content;
+    min-height: fit-content;
+
+    word-wrap: anywhere;
 }
 
 .textArea {
@@ -12,13 +17,8 @@
 
 .textArea h1 {
     font-size: 16px;
-    color: blueviolet;
 }
 
 .textArea p {
     font-size: 14px;
-}
-
-.me {
-    color: orange !important;
 }

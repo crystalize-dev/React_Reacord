@@ -16,7 +16,3 @@
 .offline {
     filter: opacity(0.5);
 }
-
-.me {
-    color:orange !important;
-}
