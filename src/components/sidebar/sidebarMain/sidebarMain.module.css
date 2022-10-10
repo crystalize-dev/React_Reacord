@@ -20,7 +20,7 @@
     box-shadow: var(--header-shadow);
     border-radius: inherit;
     font-family: 'Nunito', sans-serif;
-    font-size: 12px;
+    font-size: 50%;
 }
 
 .header > * {
@@ -29,6 +29,14 @@
 
 .header span {
     transform: scale(1.2);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease 0s;
+}
+
+.header span:hover {
+    transform: scale(1.4);
 }
 
 .chatArea {
@@ -45,17 +53,39 @@
 .expandHeader {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    padding-right: 5px;
+}
+
+.expandHeader > span {
+    cursor: pointer;
+
+    transform: scale(0.8);
+}
+
+.expandHeader > :first-child {
+    display: flex;
+    align-items: center;
 
     cursor: pointer;
 }
 
+.expandHeader > :first-child:hover h1, .expandHeader > :first-child:hover span{
+    color: white !important;
+}
+
+.expandHeader > span:hover {
+    color: white !important;
+}
+
 .expandHeader h1 {
+    font-weight: normal;
     font-size: 14px;
-    font-variant: small-caps;
     font-family: 'Nunito', sans-serif;
 }
 
-.expandHeader span {
+.expandHeader >:first-child span {
     transform: scale(0.6);
 }
 
@@ -64,9 +94,11 @@
 }
 
 .chat {
+    margin-top: 5px;
     width: 100%;
 
     transition: all 0.3s ease 0s;
+    font-weight: 600;
 }
 
 .voice {
@@ -74,9 +106,11 @@
 }
 
 .voiceBlock {
+    margin-top: 5px;
     width: 100%;
 
     transition: all 0.3s ease 0s;
+    font-weight: 600;
 }
 
 .voiceBlock > *:not(:first-child), .chat > *:not(:first-child) {

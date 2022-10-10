@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import cl from "./MainPage.module.css";
 import SidebarMain from "../components/sidebar/sidebarMain/sidebarMain";
 import UpperBar from "../components/upperBar/upperBar";
@@ -18,8 +18,6 @@ const MainPage = ({id, active, data, users}) => {
     const [visible, setVisible] = useState('none')
     const [currentChat, setCurrentChat] = useState(chats[0])
     const [inputMessage, setInputMessage] = useState('')
-
-    const msgRef = useRef(null)
 
     useEffect(() => {
         active === id ? setVisible("block") : setVisible("none")
@@ -41,20 +39,25 @@ const MainPage = ({id, active, data, users}) => {
         }))
 
         setInputMessage('')
-
-        msgRef.current.scrollTop = msgRef.current.scrollHeight;
     }
+
 
     return (
         <div id={id} style={{display: visible}} className={cl.mainPage}>
-            <SidebarMain setCurrent={setCurrentChat} current={currentChat} chats={chats} voices={voices}/>
+            <SidebarMain setCurrent={setCurrentChat}
+                         current={currentChat}
+                         chats={chats}
+                         setChats={setChats}
+                         voices={voices}
+                         setVoices={setVoices}
+                         name={data.name}/>
 
             <div className={cl.mainArea}>
                 <UpperBar chat={currentChat}/>
 
                 <div className={cl.mainChatArea}>
                     <form className={cl.chatArea} onSubmit={(e) => submit(e)}>
-                        <div className={cl.messageArea} ref={msgRef}>
+                        <div className={cl.messageArea}>
                             {
                                 currentChat.messages.map((message) => <MessageElem key={message.message}
                                                                                    sender={message.sender}

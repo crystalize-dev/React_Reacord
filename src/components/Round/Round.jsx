@@ -11,7 +11,8 @@ const Round = ({id,
                width=50,
                height=50,
                scale = 1,
-               color}) => {
+               color,
+               cursor}) => {
 
     const changeActive = (e) => {
         if (onClick) {
@@ -23,7 +24,7 @@ const Round = ({id,
 
     return (
         <div draggable={false} onClick={(e) => changeActive(e)} className={active === id ? classes(cl.body, cl.active, className) : classes(cl.body, className)}
-        style={{width: width, minWidth: width, height: height, minHeight: height, background: color}}>
+        style={{width: width, minWidth: width, height: height, minHeight: height, background: color, cursor: cursor}}>
             <img draggable={false} id={id} className={isLogo ? cl.logo : ""} src={img} alt="" style={{transform: `scale(${scale})`}}/>
         </div>
     );

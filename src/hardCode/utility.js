@@ -12,8 +12,9 @@ export const getRandomColor = () => {
     return color[getRandomIntInclusive(0, color.length)]
 }
 
-export const createGroup = (name, color, logo) => {
+export const createGroup = (id, name, color, logo) => {
     return {
+        id: id,
         logo: logo,
         color: color,
         name: name,
